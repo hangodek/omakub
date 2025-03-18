@@ -1,3 +1,4 @@
+#!/bin/bash
 set -e
 
 ascii_art='________                  __        ___.
@@ -9,20 +10,23 @@ ascii_art='________                  __        ___.
 '
 
 echo -e "$ascii_art"
-echo "=> Omakub is for fresh Ubuntu 24.04+ installations only!"
+echo "=> Omakora is for fresh Fedora 41+ installations only!"
 echo -e "\nBegin installation (or abort with ctrl+c)..."
 
-sudo apt-get update >/dev/null
-sudo apt-get install -y git >/dev/null
+# Update system and install Git
+sudo dnf update -y >/dev/null
+sudo dnf install -y git >/dev/null
 
-echo "Cloning Omakub..."
-rm -rf ~/.local/share/omakub
-git clone https://github.com/basecamp/omakub.git ~/.local/share/omakub >/dev/null
-if [[ $OMAKUB_REF != "master" ]]; then
-	cd ~/.local/share/omakub
-	git fetch origin "${OMAKUB_REF:-stable}" && git checkout "${OMAKUB_REF:-stable}"
+echo "Cloning Omakora..."
+rm -rf ~/.local/share/omakora
+git clone https://github.com/hangodek/omakora.git ~/.local/share/omakora >/dev/null
+
+# Checkout a specific branch or reference if provided
+if [[ -n "$OMAKORA_REF" ]]; then
+	cd ~/.local/share/omakora
+	git fetch origin "$OMAKORA_REF" && git checkout "$OMAKORA_REF"
 	cd -
 fi
 
 echo "Installation starting..."
-source ~/.local/share/omakub/install.sh
+source ~/.local/share/omakora/install.sh
