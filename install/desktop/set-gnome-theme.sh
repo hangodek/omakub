@@ -1,2 +1,2 @@
-source ~/.local/share/omakora/themes/tokyo-night/gnome.sh
-source ~/.local/share/omakora/themes/tokyo-night/tophat.sh
+source ~/.local/share/omakub/themes/tokyo-night/gnome.sh
+source ~/.local/share/omakub/themes/tokyo-night/tophat.sh

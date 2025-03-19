@@ -7,7 +7,7 @@ sudo dnf install -y code
 
 # Configure Visual Studio Code settings
 mkdir -p ~/.config/Code/User
-cp ~/.local/share/omakora/configs/vscode.json ~/.config/Code/User/settings.json
+cp ~/.local/share/omakub/configs/vscode.json ~/.config/Code/User/settings.json
 
 # Install default supported themes
 code --install-extension enkia.tokyo-night
