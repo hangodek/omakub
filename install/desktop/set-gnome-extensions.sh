@@ -1,4 +1,4 @@
-sudo apt install -y gnome-extensions pipx
+sudo dnf install -y gnome-extensions pipx
 pipx install gnome-extensions-cli --system-site-packages
 
 # Pause to assure user is ready to accept confirmations
