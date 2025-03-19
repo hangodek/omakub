@@ -8,7 +8,7 @@ cp ~/.local/share/omakora/configs/alacritty/font-size.toml ~/.config/alacritty/f
 
 # Make alacritty default terminal emulator
 cd /usr/bin
-sudo mv ptyxis ptyxis.NOPE
+sudo cp ptyxis ptyxis.NOPE
 sudo ln -sfv alacritty ptyxis
 
 # Adding alacritty to nautilus contextual menu requires the python wrapper for the libraries
