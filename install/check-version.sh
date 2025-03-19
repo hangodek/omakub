@@ -32,5 +32,9 @@ echo "$(tput setaf 2)OS and architecture requirements met. Proceeding with insta
 
 # Install snap
 sudo dnf install -y snapd
-sudo ln -s /var/lib/snapd/snap /snap
+
+if [ ! -L /snap/snap ]; then
+  sudo ln -s /var/lib/snapd/snap /snap
+fi
+
 sudo dnf install -y fuse squashfuse
