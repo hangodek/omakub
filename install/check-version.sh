@@ -29,3 +29,8 @@ fi
 
 # Proceed with installation
 echo "$(tput setaf 2)OS and architecture requirements met. Proceeding with installation...$(tput sgr0)"
+
+# Install snap
+sudo dnf install -y snapd
+sudo ln -s /var/lib/snapd/snap /snap
+sudo dnf install -y fuse squashfuse
