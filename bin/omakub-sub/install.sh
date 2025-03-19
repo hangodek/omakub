@@ -47,4 +47,4 @@ else
 fi
 
 clear
-source $OMAKUB_PATH/bin/omakub
+source $OMAKUB_PATH/bin/omakora
