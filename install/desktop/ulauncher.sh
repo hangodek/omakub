@@ -7,3 +7,6 @@ cp ~/.local/share/omakub/configs/ulauncher.desktop ~/.config/autostart/ulauncher
 gtk-launch ulauncher.desktop >/dev/null 2>&1
 sleep 2 # ensure enough time for ulauncher to set defaults
 cp ~/.local/share/omakub/configs/ulauncher.json ~/.config/ulauncher/settings.json
+
+# Make Ulauncher on the top
+sudo cp ~/.local/share/omakub/configs/UlauncherWindow.ui /usr/share/ulauncher/ui
