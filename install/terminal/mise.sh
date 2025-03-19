@@ -2,7 +2,7 @@
 sudo dnf install -y gpg wget curl
 
 # Add the mise repository
-sudo dnf config-manager --add-repo https://mise.jdx.dev/rpm/mise.repo
+sudo dnf config-manager --add-repo=https://mise.jdx.dev/rpm/mise.repo
 
 # Install mise
 sudo dnf install -y mise
